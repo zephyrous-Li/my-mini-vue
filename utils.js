@@ -10,6 +10,19 @@ export const TrackOpTypes = {
   HAS: "has",
   ITERATE: "iterate",
 };
+/**
+ * 派发更新的操作类型
+ */
+export const TriggerOpTypes = {
+  SET: "set",
+  ADD: "add",
+  DELETE: "delete",
+};
+
+/**
+ * 特殊标识
+ **/
+export const RAW = Symbol("raw");
 
 /**
  * 判断是否为对象

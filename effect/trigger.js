@@ -7,6 +7,6 @@
  * @param {*} value 属性值
  **/
 export default function (target, type, key, value) {
-  console.log("原始对象为", target);
+  // console.log("原始对象为", target);
   console.log(`方法${type},设置对象${key},设置值为${value}`);
 }

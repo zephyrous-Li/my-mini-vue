@@ -8,10 +8,10 @@ import { TrackOpTypes } from "../utils.js";
 export default function (target, type, key) {
   if (type === TrackOpTypes.ITERATE) {
     // 遍历操作，无key
-    console.log("原始对象为", target);
+    // console.log("原始对象为", target);
     console.log(`方法${type}`);
     return;
   }
-  console.log("原始对象为", target);
+  // console.log("原始对象为", target);
   console.log(`方法${type},读取对象${key}`);
 }
