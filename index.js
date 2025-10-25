@@ -11,5 +11,10 @@ const obj = {
 };
 
 const proxyObj = reactive(obj);
+// proxyObj.a = 11;
+// proxyObj.d = 11;
+// delete proxyObj.a;
+// "a" in proxyObj;
 
-proxyObj.a = 10;
+for (let key in proxyObj) {
+}

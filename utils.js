@@ -5,6 +5,10 @@
 export const TrackOpTypes = {
   GET: "get",
   SET: "set",
+  ADD: "add",
+  DELETE: "delete",
+  HAS: "has",
+  ITERATE: "iterate",
 };
 
 /**
@@ -14,4 +18,15 @@ export const TrackOpTypes = {
  */
 export function isObject(value) {
   return value !== null && typeof value === "object";
+}
+
+/**
+ * 判断值是否改变
+ * @param {*} oldValue
+ * @param {*} newValue
+ * @returns
+ */
+export function hasChanged(oldValue, newValue) {
+  // 使用Object.is判断值是否改变，规避NaN ===NaN的情况
+  return !Object.is(oldValue, newValue);
 }
